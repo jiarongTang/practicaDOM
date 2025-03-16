@@ -44,7 +44,7 @@ const products = [
   ];
 
   //funciones necesarias
-  //metodo para mostrar info de productos
+  //funcion para mostrar info de productos
   function mostrar(object,caja){
     let div = document.createElement("div");
     div.className = "producto";
@@ -62,7 +62,7 @@ const products = [
     caja.appendChild(div);
   }
 
-  //metodo para recorrer lista para mostrar objetos
+  //funcion para recorrer lista para mostrar objetos
   function recorre(lista,caja){
     for(let i = 0; i < lista.length; i++){
         mostrar(lista[i],caja);
@@ -114,7 +114,7 @@ const products = [
     }
   }
 
-  //display lista de tipos de articulos
+  //display lista de tipos de articulos para filtro
   const filtro = document.querySelector('#filtro');
   let input;
   let label;
@@ -134,7 +134,7 @@ const products = [
   const footer = document.querySelector("footer");
   recorre(products,mainProducto);
 
-  //filtro por nombre de producto (checkbox)
+  //filtro por nombre de producto (buscar)
   const buscar = document.getElementById("buscar");
   const click = document.querySelector('.click');
   buscar.addEventListener('click',function (){
@@ -176,7 +176,6 @@ checkboxList.forEach(element => {
             // como la lista de los tipos de filtro esta creada segun los tipos que hay en la lista
             // no es posible seleccionar un filtro que no tenga productos por entonces no apareceria en la lista
             recorre(filtrado,mainProducto);
-            
         }else{
             cant = checkboxActivo(checkboxList);
             if(cant.length == 0){
