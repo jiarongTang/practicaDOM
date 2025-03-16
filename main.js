@@ -8,7 +8,7 @@ const products = [
       image: 'https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg'
     },
     {
-        name: 'HP Essentials 255 G8 AMD',
+        name: 'HP 255 G8 AMD',
         price: 289,
         stars: 4,
         reviews: 250,
@@ -24,7 +24,7 @@ const products = [
         image: 'https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg'
       },
       {
-        name: 'HP Essentials 255 G8 AMD',
+        name: 'HP 255 G8 AMD',
         price: 289,
         stars: 4,
         reviews: 250,
@@ -32,7 +32,7 @@ const products = [
         image: 'https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg'
       },
       {
-        name: 'HP Essentials 255 G8 AMD',
+        name: 'HP 255 G8 AMD',
         price: 289,
         stars: 4,
         reviews: 250,
@@ -43,7 +43,53 @@ const products = [
     // puedes cambiar los campos de cada objeto si es necesario para tu diseño...
   ];
 
-  // filtro por tipo de elementos
+  //funciones necesarias
+  //metodo para mostrar info de productos
+  function mostrar(object,caja){
+    let div = document.createElement("div");
+    div.className = "producto";
+    let img = document.createElement("img");
+    img.src = object.image;
+    img.alt = "";
+    div.appendChild(img);
+    let p = document.createElement("p");
+    p.innerText = object.name;
+    div.appendChild(p);
+    p = document.createElement("p");
+    p.className = "price";
+    p.innerText = `${object.price} €`;
+    div.appendChild(p);
+    caja.appendChild(div);
+  }
+
+  //metodo para recorrer lista para mostrar objetos
+  function recorre(lista,caja){
+    for(let i = 0; i < lista.length; i++){
+        mostrar(lista[i],caja);
+    }
+  }
+
+  //funcion para comprobar si hay checkbox activo
+  function checkboxActivo(lista){
+    let cantidad = [];
+    for(let i = 0; i < lista.length; i++){
+        if(lista[i].checked){
+            cantidad.push(i);
+        }
+    }
+    return cantidad;
+  }
+
+  // funcion para comprobar si hay productos con el tipo indicado
+  function filtroTipo(tipo,lista){
+    for(let i = 0; i < products.length; i++){
+        if(products[i].type == tipo){
+            lista.push(products[i]);
+        }
+    }
+  }
+
+  //recopilacion de tipos de articulos
   let tipo = [];
   let incluido;
   let producto;
@@ -68,8 +114,8 @@ const products = [
     }
   }
 
+  //display lista de tipos de articulos
   const filtro = document.querySelector('#filtro');
-  console.log(tipo);
   let input;
   let label;
   let texto;
@@ -84,28 +130,63 @@ const products = [
   }
 
   // display productos
-  let div;
-  let img;
-  let p;
-
   const mainProducto = document.querySelector('#main');
-  for(let i = 0; i < products.length; i++){
-    div = document.createElement("div");
-    div.className = "producto";
-    img = document.createElement("img");
-    img.src = products[i].image;
-    img.alt = "";
-    div.appendChild(img);
-    p = document.createElement("p");
-    p.innerText = products[i].name;
-    div.appendChild(p);
-    p = document.createElement("p");
-    p.className = "price";
-    p.innerText = `${products[i].price} €`;
-    div.appendChild(p);
-    mainProducto.appendChild(div);
-  }
+  const footer = document.querySelector("footer");
+  recorre(products,mainProducto);
 
-  //filtro por tipo de producto (checkbox)
-  
+  //filtro por nombre de producto (checkbox)
+  const buscar = document.getElementById("buscar");
+  const click = document.querySelector('.click');
+  buscar.addEventListener('click',function (){
+    let valor = click.value;
+    console.log(valor);
+    let busqueda = []
+    for(let i = 0; i < products.length;i++){
+        if(products[i].name.toLowerCase().includes(valor.trim().toLowerCase())){
+            busqueda.push(products[i]);
+        }
+    }
+    mainProducto.innerHTML = "";
+    if(busqueda.length == 0){
+        div = document.createElement("div");
+        div.className = "producto";
+        div.id = "alert";
+        div.innerText = "No hay ningun producto con la palabra buscada";
+        mainProducto.appendChild(div);
+        mainProducto.style.display = "block";
+    }else{
+        mainProducto.style.display = "grid";
+        recorre(busqueda,mainProducto);
+    }
+  })
 
+//filtro por tipo de articulo
+const checkboxList = document.querySelectorAll('[type="checkbox"]');
+checkboxList.forEach(element => {
+    element.addEventListener('click',() =>{
+        let filtrado = [];
+        let cant;
+        if(element.checked){ // comprobar si activo
+            cant = checkboxActivo(checkboxList); // comprobar cuantos hay activo
+            // sabemos siempre que habra minimo un activo
+            for(let i = 0; i < cant.length; i++){
+                filtroTipo(checkboxList[cant[i]].parentNode.innerText,filtrado);
+            }
+            mainProducto.innerHTML = "";
+            // como la lista de los tipos de filtro esta creada segun los tipos que hay en la lista
+            // no es posible seleccionar un filtro que no tenga productos por entonces no apareceria en la lista
+            recorre(filtrado,mainProducto);
+            
+        }else{
+            cant = checkboxActivo(checkboxList);
+            if(cant.length == 0){
+                recorre(products, mainProducto);
+            }else{
+                for(let i = 0; i < cant.length; i++){
+                    filtroTipo(checkboxList[cant[i]].parentNode.innerText,filtrado);
+                }
+                recorre(filtrado,mainProducto);
+            }
+        }
+    })
+});
