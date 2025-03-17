@@ -166,13 +166,13 @@ checkboxList.forEach(element => {
     element.addEventListener('click',() =>{
         let filtrado = [];
         let cant;
+        mainProducto.innerHTML = "";
         if(element.checked){ // comprobar si activo
             cant = checkboxActivo(checkboxList); // comprobar cuantos hay activo
             // sabemos siempre que habra minimo un activo
             for(let i = 0; i < cant.length; i++){
                 filtroTipo(checkboxList[cant[i]].parentNode.innerText,filtrado);
             }
-            mainProducto.innerHTML = "";
             // como la lista de los tipos de filtro esta creada segun los tipos que hay en la lista
             // no es posible seleccionar un filtro que no tenga productos por entonces no apareceria en la lista
             recorre(filtrado,mainProducto);
