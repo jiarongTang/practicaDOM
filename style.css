@@ -7,9 +7,13 @@
 header{
     padding: 10px;
     margin-bottom: 10px;
-    background-color: gray;
-    color: whitesmoke;
-    height: 50px;
+    width: 100%;
+    height: 250px;
+    background-image: url("./assets/logoTitulo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom: 10px solid gray;
 }
 
 main{
@@ -28,7 +32,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 200px;
+    width: 100%;
     height: 100px;
     background-color: white;
 }
@@ -53,6 +57,7 @@ main{
 #main{
     padding: 10px;
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(3,1fr);
     grid-auto-flow: row;
     gap: 20px;
@@ -98,7 +103,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 200px;
+    width: 100%;
     background-color: whitesmoke;
 }
 
@@ -130,4 +135,54 @@ footer{
 
 footer > h3{
     font-size: 2rem;
+}
+
+@media  (max-width: 900px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    #buscador, #filtro {
+        width: 100%;
+        align-self: center;
+    }
+    
+    #buscador {
+        order: 1;
+        margin-bottom: 5px;
+    }
+    
+    #filtro {
+        order: 2;
+        margin-bottom: 5px;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    #main {
+        order: 3;
+        grid-template-columns: 1fr 1fr ;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    #buscador, #filtro {
+        width: 100%;
+    }
+    
+    #main {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
 }

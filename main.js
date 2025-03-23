@@ -1,11 +1,69 @@
 const products = [
     {
-      name: 'HP Essentials 255 G8 AMD',
-      price: 289,
-      stars: 4,
-      reviews: 250,
+      name: 'Vulpix Soda Pop',
+      price: 19.99,
       type: 'Peluche',
-      image: 'https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg'
+      image: './assets/vulpix_peluche.jpg'
+    },
+    {
+      name: 'Celebi Pumpkin Parade',
+      price: 21.99,
+      type: 'Peluche',
+      image: './assets/celebi_pumpkin_peluche.jpg'
+    },
+    {
+      name: 'Pikachu Celebracion',
+      price: 24.99,
+      type: 'Peluche',
+      image: './assets/pikachu-celebracion-peluche.jpg'
+    },
+    {
+      name: 'Vulpix Alola',
+      price: 22.99,
+      type: 'Peluche',
+      image: './assets/vulpix_alola_peluche.jpg'
+    },
+    {
+      name: 'Mimikyu',
+      price: 49.99,
+      type: 'Peluche',
+      image: './assets/mimikyu-peluche.jpg'
+    },
+    {
+      name: 'Oshawott',
+      price: 59.99,
+      type: 'Peluche',
+      image: './assets/oshawott-peluche.jpg'
+    },
+    {
+      name: 'Sprigatito',
+      price: 22.99,
+      type: 'Peluche',
+      image: './assets/sprigatito-peluche.jpg'
+    },
+    {
+      name: 'Munchlax Soda Pop',
+      price: 19.99,
+      type: 'Peluche',
+      image: './assets/munchlax_peluche.jpg'
+    },
+    {
+      name: 'Eevee Comfy Friends',
+      price: 44.99,
+      type: 'Peluche',
+      image: './assets/eevee_peluche.jpg'
+    },
+    {
+      name: 'Umbreon',
+      price: 29.99,
+      type: 'Peluche',
+      image: './assets/umbreon-peluche.jpg'
+    },
+    {
+      name: 'Sylveon',
+      price: 34.99,
+      type: 'Peluche',
+      image: './assets/sylveon-peluche.jpg'
     },
     {
         name: 'HP 255 G8 AMD',
