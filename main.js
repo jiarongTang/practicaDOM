@@ -196,13 +196,18 @@ const products = [
   const buscar = document.getElementById("buscar");
   const click = document.querySelector('.click');
   buscar.addEventListener('click',function (){
+    let listaCheck = document.querySelectorAll('[type="checkbox"]');
     let valor = click.value;
-    console.log(valor);
     let busqueda = []
     for(let i = 0; i < products.length;i++){
         if(products[i].name.toLowerCase().includes(valor.trim().toLowerCase())){
             busqueda.push(products[i]);
         }
+    }
+    for(let i = 0; i < listaCheck.length;i++){
+      if(listaCheck[i].checked){
+        listaCheck[i].checked = false;
+      }
     }
     mainProducto.innerHTML = "";
     if(busqueda.length == 0){
@@ -220,11 +225,17 @@ const products = [
 
 //filtro por tipo de articulo
 const checkboxList = document.querySelectorAll('[type="checkbox"]');
+const busqueda = document.getElementsByClassName("click");
 checkboxList.forEach(element => {
     element.addEventListener('click',() =>{
         let filtrado = [];
         let cant;
+        let busqueda = document.querySelector('.click');
         mainProducto.innerHTML = "";
+        if(busqueda.value != ""){
+          busqueda.innerText = "";
+          busqueda.value = "";
+        }
         if(element.checked){ // comprobar si activo
             cant = checkboxActivo(checkboxList); // comprobar cuantos hay activo
             // sabemos siempre que habra minimo un activo
