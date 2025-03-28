@@ -6,22 +6,10 @@ const products = [
       image: './assets/vulpix_peluche.jpg'
     },
     {
-      name: 'Celebi Pumpkin Parade',
-      price: 21.99,
-      type: 'Peluche',
-      image: './assets/celebi_pumpkin_peluche.jpg'
-    },
-    {
-      name: 'Pikachu Celebracion',
-      price: 24.99,
-      type: 'Peluche',
-      image: './assets/pikachu-celebracion-peluche.jpg'
-    },
-    {
-      name: 'Vulpix Alola',
-      price: 22.99,
-      type: 'Peluche',
-      image: './assets/vulpix_alola_peluche.jpg'
+      name: 'Leyendas Pokemon: Arceus Switch',
+      price: 59.99,
+      type: 'Videojuego',
+      image: './assets/pokemonArceus.png'
     },
     {
       name: 'Mimikyu',
@@ -30,16 +18,22 @@ const products = [
       image: './assets/mimikyu-peluche.jpg'
     },
     {
+      name: 'Escarlata y Purpura Sobre Cartas Chispas Furgurantes',
+      price: 4.99,
+      type: 'Cartas',
+      image: './assets/EP_chispasFurgurantes.webp'
+    },
+    {
       name: 'Oshawott',
       price: 59.99,
       type: 'Peluche',
       image: './assets/oshawott-peluche.jpg'
     },
     {
-      name: 'Sprigatito',
-      price: 22.99,
-      type: 'Peluche',
-      image: './assets/sprigatito-peluche.jpg'
+      name: 'Escarlata y Purpura Caja Elite Evoluciones Prismaticas',
+      price: 64.99,
+      type: 'Cartas',
+      image: './assets/EP_evolucionesPrismaticasElite.png'
     },
     {
       name: 'Munchlax Soda Pop',
@@ -48,16 +42,16 @@ const products = [
       image: './assets/munchlax_peluche.jpg'
     },
     {
+      name: 'Pokemon Edicion Plata Soulsilver Nintendo DS',
+      price: 129.99,
+      type: 'Videojuego',
+      image: './assets/pokemonPlata.jpg'
+    },
+    {
       name: 'Eevee Comfy Friends',
       price: 44.99,
       type: 'Peluche',
       image: './assets/eevee_peluche.jpg'
-    },
-    {
-      name: 'Umbreon',
-      price: 29.99,
-      type: 'Peluche',
-      image: './assets/umbreon-peluche.jpg'
     },
     {
       name: 'Sylveon',
@@ -66,125 +60,131 @@ const products = [
       image: './assets/sylveon-peluche.jpg'
     },
     {
-        name: 'Espada y Escudo Cenit Supremo Blister Pack',
-        price: 54.95,
-        type: 'Cartas',
-        image: './assets/EE_cenitSupremoBlister.png'
-      },
-      {
-        name: 'Espada y Escudo Tempestad Platedad Caja Cartas',
-        price: 159.99,
-        type: 'Cartas',
-        image: './assets/EE_tempestadPlateadaCaja.avif'
-      },
-      {
-        name: 'Escarlata y Purpura Sobre Cartas Chispas Furgurantes',
-        price: 4.99,
-        type: 'Cartas',
-        image: './assets/EP_chispasFurgurantes.webp'
-      },
-      {
-        name: 'Escarlata y Purpura Sobre Cartas Corona Atral',
-        price: 4.99,
-        type: 'Cartas',
-        image: './assets/EP_coronaAstral.png'
-      },
-      {
-        name: 'Escarlata y Purpura Booster Pack Destino de Paldea',
-        price: 34.99,
-        type: 'Cartas',
-        image: './assets/EP_destinoPaldeaBoster.png'
-      },
-      {
-        name: 'Escarlata y Purpura Caja Elite Evoluciones Prismaticas',
-        price: 64.99,
-        type: 'Cartas',
-        image: './assets/EP_evolucionesPrismaticasElite.png'
-      },
-      {
-        name: 'Escarlata y Purpura Caja Elite Juntos de Aventuras',
-        price: 59.99,
-        type: 'Cartas',
-        image: './assets/EP_juntosAventurasElite.png'
-      },
-      {
-        name: 'Escarlata y Purpura Sobre Cartas Origen Perdido',
-        price: 4.99,
-        type: 'Cartas',
-        image: './assets/EP_origenPerdido.jpg'
-      },
-      {
-        name: 'Caja Estadio Combina Combate',
-        price: 69.99,
-        type: 'Cartas',
-        image: './assets/EstadioCombinaCombate.png'
-      },
-      {
-        name: 'Pokemon Go Caja Elite',
-        price: 64.99,
-        type: 'Cartas',
-        image: './assets/PGO_elite.jpg'
-      },
-      {
-        name: 'Sol y Luna Sobre Cartas Mentes Unidas',
-        price: 4.99,
-        type: 'Cartas',
-        image: './assets/SL_mentesUnidas.webp'
-      },
-      {
-        name: 'Leyendas Pokemon: Arceus Switch',
-        price: 59.99,
-        type: 'Videojuego',
-        image: './assets/pokemonArceus.png'
-      },
-      {
-        name: 'Detective Pikachu Nintendo 3DS',
-        price: 49.99,
-        type: 'Videojuego',
-        image: './assets/detectivePikachu.jpg'
-      },
-      {
-        name: 'Pokemon Mundo Misterioso: Equipo de Rescate Azul Nintendo 3DS',
-        price: 9.95,
-        type: 'Videojuego',
-        image: './assets/pokemonMundoMisterioso.png'
-      },
-      {
-        name: 'Pokemon Purpura Switch',
-        price: 59.99,
-        type: 'Videojuego',
-        image: './assets/pokemonPurpura.png'
-      },
-      {
-        name: 'Pokemon X Nintendo 3DS',
-        price: 39.99,
-        type: 'Videojuego',
-        image: './assets/pokemonX.png'
-      },
-      {
-        name: 'Pokemon Edicion Platino Nintendo DS',
-        price: 149.99,
-        type: 'Videojuego',
-        image: './assets/pokemonPlatino.webp'
-      },
-      {
-        name: 'Pokemon Negro 2 Nintendo DS',
-        price: 59.99,
-        type: 'Videojuego',
-        image: './assets/pokemonNegro2.jpg'
-      },
-      {
-        name: 'Pokemon Edicion Plata Soulsilver Nintendo DS',
-        price: 129.99,
-        type: 'Videojuego',
-        image: './assets/pokemonPlata.jpg'
-      },
-      {
-        name: 'Pokemon Espada Switch',
-        price: 49.99,
-        type: 'Videojuego',
-        image: './assets/pokemonEspada.webp'
-      }
+      name: 'Espada y Escudo Cenit Supremo Blister Pack',
+      price: 54.95,
+      type: 'Cartas',
+      image: './assets/EE_cenitSupremoBlister.png'
+    },
+    {
+      name: 'Escarlata y Purpura Sobre Cartas Corona Atral',
+      price: 4.99,
+      type: 'Cartas',
+      image: './assets/EP_coronaAstral.png'
+    },
+    {
+      name: 'Escarlata y Purpura Booster Pack Destino de Paldea',
+      price: 34.99,
+      type: 'Cartas',
+      image: './assets/EP_destinoPaldeaBoster.png'
+    },
+    {
+      name: 'Umbreon',
+      price: 29.99,
+      type: 'Peluche',
+      image: './assets/umbreon-peluche.jpg'
+    },
+    {
+      name: 'Escarlata y Purpura Caja Elite Juntos de Aventuras',
+      price: 59.99,
+      type: 'Cartas',
+      image: './assets/EP_juntosAventurasElite.png'
+    },
+    {
+      name: 'Escarlata y Purpura Sobre Cartas Origen Perdido',
+      price: 4.99,
+      type: 'Cartas',
+      image: './assets/EP_origenPerdido.jpg'
+    },
+    {
+      name: 'Pokemon Negro 2 Nintendo DS',
+      price: 59.99,
+      type: 'Videojuego',
+      image: './assets/pokemonNegro2.jpg'
+    },
+    {
+      name: 'Sprigatito',
+      price: 22.99,
+      type: 'Peluche',
+      image: './assets/sprigatito-peluche.jpg'
+    },
+    {
+      name: 'Caja Estadio Combina Combate',
+      price: 69.99,
+      type: 'Cartas',
+      image: './assets/EstadioCombinaCombate.png'
+    },
+    {
+      name: 'Celebi Pumpkin Parade',
+      price: 21.99,
+      type: 'Peluche',
+      image: './assets/celebi_pumpkin_peluche.jpg'
+    },
+    {
+      name: 'Pokemon Go Caja Elite',
+      price: 64.99,
+      type: 'Cartas',
+      image: './assets/PGO_elite.jpg'
+    },
+    {
+      name: 'Sol y Luna Sobre Cartas Mentes Unidas',
+      price: 4.99,
+      type: 'Cartas',
+      image: './assets/SL_mentesUnidas.webp'
+    },
+    {
+      name: 'Detective Pikachu Nintendo 3DS',
+      price: 49.99,
+      type: 'Videojuego',
+      image: './assets/detectivePikachu.jpg'
+    },
+    {
+      name: 'Vulpix Alola',
+      price: 22.99,
+      type: 'Peluche',
+      image: './assets/vulpix_alola_peluche.jpg'
+    },
+    {
+      name: 'Pokemon Mundo Misterioso: Equipo de Rescate Azul Nintendo 3DS',
+      price: 9.95,
+      type: 'Videojuego',
+      image: './assets/pokemonMundoMisterioso.png'
+    },
+    {
+      name: 'Pokemon Purpura Switch',
+      price: 59.99,
+      type: 'Videojuego',
+      image: './assets/pokemonPurpura.png'
+    },
+    {
+      name: 'Espada y Escudo Tempestad Platedad Caja Cartas',
+      price: 159.99,
+      type: 'Cartas',
+      image: './assets/EE_tempestadPlateadaCaja.avif'
+    },
+    {
+      name: 'Pokemon X Nintendo 3DS',
+      price: 39.99,
+      type: 'Videojuego',
+      image: './assets/pokemonX.png'
+    },
+    {
+      name: 'Pikachu Celebracion',
+      price: 24.99,
+      type: 'Peluche',
+      image: './assets/pikachu-celebracion-peluche.jpg'
+    },
+    {
+      name: 'Pokemon Edicion Platino Nintendo DS',
+      price: 149.99,
+      type: 'Videojuego',
+      image: './assets/pokemonPlatino.webp'
+    },
+    {
+      name: 'Pokemon Espada',
+      price: 49.99,
+      type: 'Videojuego',
+      image: './assets/pokemonEspada.webp'
+    }
     // Añade aquí al menos 9 productos más para tener un total de 10 productos
     // puedes cambiar los campos de cada objeto si es necesario para tu diseño...
   ];
