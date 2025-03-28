@@ -133,9 +133,57 @@ const products = [
       },
       {
         name: 'Leyendas Pokemon: Arceus Switch',
-        price: 49.99,
+        price: 59.99,
         type: 'Videojuego',
         image: './assets/pokemonArceus.png'
+      },
+      {
+        name: 'Detective Pikachu Nintendo 3DS',
+        price: 49.99,
+        type: 'Videojuego',
+        image: './assets/detectivePikachu.jpg'
+      },
+      {
+        name: 'Pokemon Mundo Misterioso: Equipo de Rescate Azul Nintendo 3DS',
+        price: 9.95,
+        type: 'Videojuego',
+        image: './assets/pokemonMundoMisterioso.png'
+      },
+      {
+        name: 'Pokemon Purpura Switch',
+        price: 59.99,
+        type: 'Videojuego',
+        image: './assets/pokemonPurpura.png'
+      },
+      {
+        name: 'Pokemon X Nintendo 3DS',
+        price: 39.99,
+        type: 'Videojuego',
+        image: './assets/pokemonX.png'
+      },
+      {
+        name: 'Pokemon Edicion Platino Nintendo DS',
+        price: 149.99,
+        type: 'Videojuego',
+        image: './assets/pokemonPlatino.webp'
+      },
+      {
+        name: 'Pokemon Negro 2 Nintendo DS',
+        price: 59.99,
+        type: 'Videojuego',
+        image: './assets/pokemonNegro2.jpg'
+      },
+      {
+        name: 'Pokemon Edicion Plata Soulsilver Nintendo DS',
+        price: 129.99,
+        type: 'Videojuego',
+        image: './assets/pokemonPlata.jpg'
+      },
+      {
+        name: 'Pokemon Espada Switch',
+        price: 49.99,
+        type: 'Videojuego',
+        image: './assets/pokemonEspada.webp'
       },
       {
         name: 'HP 255 G8 AMD',
