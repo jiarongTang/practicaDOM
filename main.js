@@ -66,20 +66,76 @@ const products = [
       image: './assets/sylveon-peluche.jpg'
     },
     {
-        name: 'HP 255 G8 AMD',
-        price: 289,
-        stars: 4,
-        reviews: 250,
+        name: 'Espada y Escudo Cenit Supremo Blister Pack',
+        price: 54.95,
         type: 'Cartas',
-        image: 'https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg'
+        image: './assets/EE_cenitSupremoBlister.png'
       },
       {
-        name: 'HP Essentials 255 G8 AMD',
-        price: 289,
-        stars: 4,
-        reviews: 250,
+        name: 'Espada y Escudo Tempestad Platedad Caja Cartas',
+        price: 159.99,
+        type: 'Cartas',
+        image: './assets/EE_tempestadPlateadaCaja.avif'
+      },
+      {
+        name: 'Escarlata y Purpura Sobre Cartas Chispas Furgurantes',
+        price: 4.99,
+        type: 'Cartas',
+        image: './assets/EP_chispasFurgurantes.webp'
+      },
+      {
+        name: 'Escarlata y Purpura Sobre Cartas Corona Atral',
+        price: 4.99,
+        type: 'Cartas',
+        image: './assets/EP_coronaAstral.png'
+      },
+      {
+        name: 'Escarlata y Purpura Booster Pack Destino de Paldea',
+        price: 34.99,
+        type: 'Cartas',
+        image: './assets/EP_destinoPaldeaBoster.png'
+      },
+      {
+        name: 'Escarlata y Purpura Caja Elite Evoluciones Prismaticas',
+        price: 64.99,
+        type: 'Cartas',
+        image: './assets/EP_evolucionesPrismaticasElite.png'
+      },
+      {
+        name: 'Escarlata y Purpura Caja Elite Juntos de Aventuras',
+        price: 59.99,
+        type: 'Cartas',
+        image: './assets/EP_juntosAventurasElite.png'
+      },
+      {
+        name: 'Escarlata y Purpura Sobre Cartas Origen Perdido',
+        price: 4.99,
+        type: 'Cartas',
+        image: './assets/EP_origenPerdido.jpg'
+      },
+      {
+        name: 'Caja Estadio Combina Combate',
+        price: 69.99,
+        type: 'Cartas',
+        image: './assets/EstadioCombinaCombate.png'
+      },
+      {
+        name: 'Pokemon Go Caja Elite',
+        price: 64.99,
+        type: 'Cartas',
+        image: './assets/PGO_elite.jpg'
+      },
+      {
+        name: 'Sol y Luna Sobre Cartas Mentes Unidas',
+        price: 4.99,
+        type: 'Cartas',
+        image: './assets/SL_mentesUnidas.webp'
+      },
+      {
+        name: 'Leyendas Pokemon: Arceus Switch',
+        price: 49.99,
         type: 'Videojuego',
-        image: 'https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg'
+        image: './assets/pokemonArceus.png'
       },
       {
         name: 'HP 255 G8 AMD',
